@@ -10,13 +10,208 @@ body { margin: 0; padding: 0; }
 </style>
 </head>
 <body>
-<div style="position:relative;width:100vw;height:100vh;overflow:hidden;">
-<img src="https://www.vgmag.it/wp-content/uploads/2024/05/Honor-of-Kings.jpg"
-alt="Honor of Kings"
-style="width:100%;height:100%;object-fit:cover;">
-<div style="position:absolute;top:10px;left:50%;transform:translateX(-50%);color:white;font-weight:bold;text-shadow:0 0 3px #000;font-size:80px;">
-HONOR OF KINGS  
-</div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配手机屏幕 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honor of Kings</title>
+    <style>
+        /* 全局重置，消除默认边距 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* 页面容器，全屏定位，作为视频的父容器 */
+        .page-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #000; /* 视频加载前的黑色背景 */
+        }
+
+        /* 背景视频核心样式 */
+        .bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            /* 居中视频，避免拉伸 */
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            /* 视频下方加黑色渐变，让文字更清晰 */
+            filter: brightness(0.7);
+        }
+
+        /* 渐变遮罩，增强文字可读性 */
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+            z-index: 2;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* LOGO样式 */
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        /* 导航图标栏（购物车、语言、下载、菜单） */
+        .nav-icons {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-icon {
+            width: 32px;
+            height: 32px;
+            filter: invert(1); /* 白色图标，适配深色背景 */
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .nav-icon:hover {
+            opacity: 0.7;
+        }
+
+        /* 中间标题区域 */
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+            color: #fff;
+        }
+
+        /* 主LOGO（中间的大标志+文字） */
+        .main-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .main-logo-icon {
+            width: 80px;
+            height: 80px;
+            fill: #f5e7c8;
+        }
+
+        .main-logo-text {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #f5e7c8;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        /* 副标题（5V5 MOBILE MOBA） */
+        .subtitle {
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            color: #f5e7c8;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* 响应式适配：手机端缩小字体 */
+        @media (max-width: 768px) {
+            .main-logo-text {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+                letter-spacing: 0.15rem;
+            }
+            .navbar {
+                padding: 1.5rem 3%;
+            }
+            .logo {
+                height: 30px;
+            }
+            .nav-icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 背景视频 -->
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src="bg-video.mp4" type="video/mp4">
+            <!-- 视频加载失败时的提示 -->
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- 渐变遮罩 -->
+        <div class="video-overlay"></div>
+
+        <!-- 导航栏 -->
+        <nav class="navbar">
+            <img src="logo.png" alt="Honor of Kings" class="logo">
+            <div class="nav-icons">
+                <!-- 导航图标：你可以替换成自己的图标 -->
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                </svg>
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </div>
+        </nav>
+
+        <!-- 中间标题内容 -->
+        <div class="hero-content">
+            <div class="main-logo">
+                <!-- 中间的圆形标志 -->
+                <svg class="main-logo-icon" viewBox="0 0 100 100">
+                    <path d="M50 0 C 77.6 0 100 22.4 100 50 C 100 77.6 77.6 100 50 100 C 22.4 100 0 77.6 0 50 C 0 22.4 22.4 0 50 0 Z M 50 20 C 33.4 20 20 33.4 20 50 C 20 66.6 33.4 80 50 80 C 66.6 80 80 66.6 80 50 C 80 33.4 66.6 20 50 20 Z M 50 35 C 58.3 35 65 41.7 65 50 C 65 58.3 58.3 65 50 65 C 41.7 65 35 58.3 35 50 C 35 41.7 41.7 35 50 35 Z M 50 45 C 47.2 45 45 47.2 45 50 C 45 52.8 47.2 55 50 55 C 52.8 55 55 52.8 55 50 C 55 47.2 52.8 45 50 45 Z M 85 50 L 50 85 L 15 50 L 50 15 Z" />
+                </svg>
+                <div class="main-logo-text">
+                    HONOR<br>OF KINGS
+                </div>
+            </div>
+            <p class="subtitle">5V5 MOBILE MOBA</p>
+        </div>
+    </div>
+</body>
+</html>
 </body>
 </html>
