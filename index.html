@@ -4,188 +4,74 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Honor of Kings</title>
+
 <style>
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Arial', sans-serif;
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.hero-section {
+body {
+overflow: hidden;
+}
+
+.hero {
 position: relative;
 width: 100vw;
 height: 100vh;
-overflow: hidden;
-background-color: #000;
 }
-
-.bg-video {
+.hero video {
 position: absolute;
 top: 50%;
 left: 50%;
 min-width: 100%;
 min-height: 100%;
-width: auto;
-height: auto;
 transform: translate(-50%, -50%);
-z-index: 1;
 object-fit: cover;
 }
 
-.nav-top {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-padding: 1rem 4%;
-z-index: 10;
-display: flex;
-align-items: center;
-background-color: rgba(0,0,0,0.3);
-}
-
-.center-logo {
+.logo {
 position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-z-index: 99;
 }
 
-/* 表单区块：下滑可见 */
-.form-section {
+.logo img {
+width: 400px;
+}
+
+.nav {
+position: absolute;
+top: 0;
 width: 100%;
-min-height: 100vh;
-background-color: #000;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 40px 20px;
+padding: 15px;
+background: rgba(0,0,0,0.4);
 }
 
-.form-container {
-width: 100%;
-max-width: 400px;
-padding: 30px;
-border:1px solid #ccc;
-border-radius:8px;
-background-color: rgba(0,0,0,0.7);
-color: #fff;
-}
-
-.form-container h3 {
-text-align:center;
-margin-bottom: 25px;
-font-size: 22px;
-}
-
-.form-group {
-margin:20px 0;
-}
-
-.form-group label {
-font-size: 16px;
-}
-
-.form-group input {
-width:100%;
-padding:12px;
-margin-top:8px;
-border:1px solid #ddd;
-border-radius:4px;
-font-size: 14px;
-}
-
-.form-group button {
-width:100%;
-padding:14px;
-background:#007bff;
-color:white;
-border:none;
-border-radius:4px;
-cursor:pointer;
-font-size: 16px;
-margin-top: 10px;
-}
-
-.radio-group {
-margin-top: 8px;
-}
-.radio-group label {
-margin-right: 20px;
-cursor: pointer;
-}
-
-.content-section {
-width: 100%;
-min-height: 100vh;
-background: #111;
-color: #fff;
-padding: 60px 20px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.content-container {
-max-width: 1200px;
-margin: 0 auto;
-text-align: center;
-}
-
-.content-container h2 {
-font-size: 32px;
-margin-bottom: 30px;
-}
-
-.content-container p {
-font-size: 18px;
-line-height: 1.8;
+.nav img {
+width: 120px;
 }
 </style>
 </head>
+
 <body>
 
-<div class="hero-section">
-<video class="bg-video" loop muted autoplay playsinline preload="auto" src="https://assets.mixkit.co/videos/preview/mixkit-cloudy-mountain-landscape-at-sunset-1221-large.mp4"></video>
-<div class="nav-top">
-<img src="Honor_of_Kings_logo.png" style="width:150px;" alt="Honor of Kings">
-</div>
-<div class="center-logo">
-<img src="Honor_of_Kings_logo.png" style="width: 500px;" alt="Honor of Kings">
-</div>
-</div>
-<div class="form-section">
-<div class="form-container">
-<h3>Inserisci le informazioni dell'utente</h3>
-<div class="form-group">
-<label>nome:</label>
-<input type="text" placeholder="scrivi il tuo nome del gioco">
-</div>
-<div class="form-group">
-<label>data di nascita:</label>
-<input type="date">
-</div>
-<div class="form-group">
-<label>maschio/femmina:</label>
-<div class="radio-group">
-<input type="radio" name="gender" id="male" checked>
-<label for="male">maschio</label>
-<input type="radio" name="gender" id="female">
-<label for="female">femmina</label>
-</div>
-</div>
-<div class="form-group">
-<button>Invia informazioni</button>
-</div>
-</div>
+<div class="hero">
+
+<video autoplay muted loop>
+<source src="https://assets.mixkit.co/videos/preview/mixkit-cloudy-mountain-landscape-at-sunset-1221-large.mp4">
+</video>
+
+<div class="nav">
+<img src="Honor_of_Kings_logo.png">
 </div>
 
-<div class="content-section">
-<div class="content-container">
-<h2>Benvenuto in Honor of Kings</h2>
+<div class="logo">
+<img src="Honor_of_Kings_logo.png">
 </div>
+
 </div>
 
 </body>
