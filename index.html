@@ -6,8 +6,10 @@
 <title>Honor of Kings</title>
 
 <style>
+
 {
 margin: 0;
+padding: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: Arial, sans-serif;
@@ -18,7 +20,8 @@ position: relative;
 width: 100%;
 height: 100vh;
 overflow: hidden;
-background: #000;
+background-color: #000;
+border-bottom: 2px solid rgba(255,255,255,0.2);
 }
 
 .bg-video {
@@ -29,6 +32,26 @@ width: 100%;
 height: 100%;
 transform: translate(-50%, -50%);
 object-fit: cover;
+}
+
+.nav-top {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+padding: 15px 5%;
+z-index: 10;
+display: flex;
+align-items: center;
+background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+
+.center-logo {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 99;
 }
 
 .form-section{
@@ -52,6 +75,7 @@ flex-direction:column;
 gap:20px;
 }
 
+/* 方块 */
 .side-box{
 width:90px;
 height:90px;
@@ -65,7 +89,6 @@ transition:0.3s;
 transform:scale(1.1);
 }
 
-/* 图片 */
 .side-box img{
 width:100%;
 height:100%;
@@ -89,6 +112,10 @@ margin:15px 0;
 .form-group input{
 width:100%;
 padding:10px;
+margin-top:5px;
+background: rgba(255,255,255,0.05);
+color:#fff;
+border:1px solid rgba(255,255,255,0.2);
 }
 
 .content-section{
@@ -98,6 +125,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 color:#fff;
+text-align:center;
 }
 
 </style>
@@ -110,8 +138,15 @@ color:#fff;
 <video class="bg-video" autoplay muted loop playsinline
 src="Closed Beta Announcement Video _ Honor of Kings.mp4"></video>
 
+<div class="nav-top">
+<img src="Honor_of_Kings_logo.png" style="width:140px;">
 </div>
 
+<div class="center-logo">
+<img src="Honor_of_Kings_logo.png" style="width:420px;">
+</div>
+
+</div>
 <div class="form-section">
 
 <div class="form-wrapper">
@@ -141,11 +176,24 @@ src="Closed Beta Announcement Video _ Honor of Kings.mp4"></video>
 <h3>Inserisci le informazioni dell'utente</h3>
 
 <div class="form-group">
-<input type="text" placeholder="nome">
+<label>nome:</label>
+<input type="text" placeholder="scrivi il tuo nome del gioco">
 </div>
 
 <div class="form-group">
+<label>data di nascita:</label>
 <input type="date">
+</div>
+
+<div class="form-group">
+<label>maschio/femmina:</label>
+<div class="radio-group">
+<input type="radio" name="gender" id="male" checked>
+<label for="male">maschio</label>
+
+<input type="radio" name="gender" id="female">
+<label for="female">femmina</label>
+</div>
 </div>
 
 <div class="form-group">
@@ -177,7 +225,6 @@ src="Closed Beta Announcement Video _ Honor of Kings.mp4"></video>
 </div>
 
 </div>
-
 <div class="content-section">
 <h2>Benvenuto in Honor of Kings</h2>
 </div>
