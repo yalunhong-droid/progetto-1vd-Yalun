@@ -6,12 +6,11 @@
 <title>Honor of Kings</title>
 
 <style>
-
 {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: 'Arial', sans-serif;
+font-family: Arial, sans-serif;
 }
 
 .hero-section {
@@ -19,19 +18,7 @@ position: relative;
 width: 100%;
 height: 100vh;
 overflow: hidden;
-background-color: #000;
-border-bottom: 2px solid rgba(255,255,255,0.2);
-}
-
-.hero-section::after {
-content: "";
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 150px;
-background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
-z-index: 5;
+background: #000;
 }
 
 .bg-video {
@@ -41,127 +28,76 @@ left: 50%;
 width: 100%;
 height: 100%;
 transform: translate(-50%, -50%);
-z-index: 1;
 object-fit: cover;
-background-color: #000;
 }
 
-.nav-top {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-padding: 15px 5%;
-z-index: 10;
-display: flex;
-align-items: center;
-background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
-}
-
-.center-logo {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: 99;
-}
-
-.form-section {
-width: 100%;
-min-height: 100vh;
-background-color: #000;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 40px 20px;
+.form-section{
+width:100%;
+min-height:100vh;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .form-wrapper{
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 60px;
+display:flex;
+gap:60px;
+align-items:center;
 }
 
 .side-column{
-display: flex;
-flex-direction: column;
-gap: 20px;
+display:flex;
+flex-direction:column;
+gap:20px;
 }
 
 .side-box{
-width: 90px;
-height: 90px;
-background: rgba(255,255,255,0.08);
-border: 1px solid rgba(255,255,255,0.2);
-border-radius: 10px;
-transition: 0.3s;
+width:90px;
+height:90px;
+border-radius:10px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.2);
+transition:0.3s;
 }
 
 .side-box:hover{
-transform: scale(1.1);
-background: rgba(255,255,255,0.18);
+transform:scale(1.1);
 }
 
-.form-container {
-width: 100%;
-max-width: 400px;
-padding: 30px;
+/* 图片 */
+.side-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.form-container{
+width:400px;
+padding:30px;
+background:rgba(0,0,0,0.8);
 border:1px solid rgba(255,255,255,0.2);
 border-radius:10px;
-background-color: rgba(0,0,0,0.8);
-color: #fff;
-backdrop-filter: blur(10px);
+color:#fff;
 }
 
-.form-group {
-margin:20px 0;
+.form-group{
+margin:15px 0;
 }
 
-.form-group label {
-font-size: 15px;
-opacity: 0.8;
-}
-
-.form-group input {
+.form-group input{
 width:100%;
-padding:12px;
-margin-top:8px;
-border:1px solid rgba(255,255,255,0.2);
-border-radius:5px;
-font-size: 14px;
-background: rgba(255,255,255,0.05);
-color: #fff;
+padding:10px;
 }
 
-.form-group button {
-width:100%;
-padding:14px;
-background: linear-gradient(45deg, #007bff, #00c6ff);
-color:white;
-border:none;
-border-radius:6px;
-cursor:pointer;
-font-size: 16px;
-margin-top: 10px;
-}
-
-.content-section {
-width: 100%;
-min-height: 100vh;
-background: #111;
-color: #fff;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.content-container {
-text-align: center;
-}
-
-.content-container h2 {
-font-size: 32px;
+.content-section{
+min-height:100vh;
+background:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+color:#fff;
 }
 
 </style>
@@ -171,84 +107,79 @@ font-size: 32px;
 
 <div class="hero-section">
 
-<video class="bg-video" loop muted autoplay playsinline preload="auto"
+<video class="bg-video" autoplay muted loop playsinline
 src="Closed Beta Announcement Video _ Honor of Kings.mp4"></video>
-
-<div class="nav-top">
-<img src="Honor_of_Kings_logo.png" style="width:140px;">
-</div>
-
-<div class="center-logo">
-<img src="Honor_of_Kings_logo.png" style="width:420px;">
-</div>
 
 </div>
 
 <div class="form-section">
 
-  <div class="form-wrapper">
+<div class="form-wrapper">
 
-    <div class="side-column">
-      <div class="side-box">
-      <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/chicha.shtml">
-      <div class="side-box">
-      <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/nezha.shtml">
-      <div class="side-box">
-      <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/xiaoqiao.shtml">
-      <div class="side-box">
-       <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/lvbu.shtml">
-    </div>
+<div class="side-column">
 
-    <div class="form-container">
+  <div class="side-box">
+    <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/chicha.shtml">
+  </div>
 
-      <h3>Inserisci le informazioni dell'utente</h3>
+  <div class="side-box">
+    <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/nezha.shtml">
+  </div>
 
-      <div class="form-group">
-        <label>nome:</label>
-        <input type="text">
-      </div>
+  <div class="side-box">
+    <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/xiaoqiao.shtml">
+  </div>
 
-      <div class="form-group">
-        <label>data di nascita:</label>
-        <input type="date">
-      </div>
-
-      <div class="form-group">
-        <label>maschio/femmina:</label>
-        <div class="radio-group">
-          <input type="radio" name="gender" id="male" checked>
-          <label for="male">maschio</label>
-
-          <input type="radio" name="gender" id="female">
-          <label for="female">femmina</label>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <button>Invia informazioni</button>
-      </div>
-
-    </div>
-
-    <div class="side-column">
-      <div class="side-box"
-      <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/ying.shtml">
-      <div class="side-box">
-      <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/baiqi.shtml">
-      <div class="side-box">
-      <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/shaosiyuan.shtml">
-      <div class="side-box">
-      <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/gongsunli.shtml">
-    </div>
-
+  <div class="side-box">
+    <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/lvbu.shtml">
   </div>
 
 </div>
 
-<div class="content-section">
-<div class="content-container">
-<h2>Benvenuto in Honor of Kings</h2>
+<div class="form-container">
+
+<h3>Inserisci le informazioni dell'utente</h3>
+
+<div class="form-group">
+<input type="text" placeholder="nome">
 </div>
+
+<div class="form-group">
+<input type="date">
+</div>
+
+<div class="form-group">
+<button>Invia informazioni</button>
+</div>
+
+</div>
+
+<div class="side-column">
+
+  <div class="side-box">
+    <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/ying.shtml">
+  </div>
+
+  <div class="side-box">
+    <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/baiqi.shtml">
+  </div>
+
+  <div class="side-box">
+    <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/shaosiyuan.shtml">
+  </div>
+
+  <div class="side-box">
+    <img src="hero1.jpg" alt="https://pvp.qq.com/web201605/herodetail/gongsunli.shtml">
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="content-section">
+<h2>Benvenuto in Honor of Kings</h2>
 </div>
 
 </body>
