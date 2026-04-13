@@ -30,113 +30,34 @@ width: auto;
 height: auto;
 transform: translate(-50%, -50%);
 z-index: 1;
-filter: brightness(0.7);
+object-fit: cover;
 }
 
-.video-overlay {
+.nav-top {
 position: absolute;
 top: 0;
 left: 0;
 width: 100%;
-height: 100%;
-background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
-z-index: 2;
-}
-
-.navbar {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-padding: 2rem 5%;
-display: flex;
-justify-content: space-between;
-align-items: center;
+padding: 1rem 4%;
 z-index: 10;
+display: flex;
+align-items: center;
+background-color: rgba(0,0,0,0.3);
 }
 
-.logo {
-height: 40px;
+.hok-logo {
+height: 35px;
 width: auto;
-}
-
-.hero-content {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-text-align: center;
-z-index: 10;
-color: #fff;
-}
-
-.main-logo {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 1rem;
-margin-bottom: 1.5rem;
-}
-
-.main-logo-icon {
-width: 80px;
-height: 80px;
-fill: #f5e7c8;
-}
-
-.main-logo-text {
-font-size: 3.5rem;
-font-weight: bold;
-color: #f5e7c8;
-line-height: 1;
-text-transform: uppercase;
-}
-
-.subtitle {
-font-size: 1.5rem;
-letter-spacing: 0.3rem;
-color: #f5e7c8;
-margin-bottom: 2rem;
-text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-.main-logo-text {
-font-size: 2rem;
-}
-.subtitle {
-font-size: 1rem;
-letter-spacing: 0.15rem;
-}
-.navbar {
-padding: 1.5rem 3%;
-}
-.logo {
-height: 30px;
-}
+display: block;
 }
 </style>
 </head>
 <body>
 <div class="page-container">
-<video id="kvVideo" style="display: block;" oncanplay="this.style.display='block';" class="hok_vidbg" data-pc="/img/hd_bg2" data-h5="./img/mhd_bg2" loop="" muted="" autoplay="" webkit-playsinline="true" x5-playsinline="" x5-video-player-type="h5" x5-video-player-fullscreen="false" playsinline="true" preload="auto" x-webkit-airplay="allow" x5-video-orientation="portrait" width="100%" height="100%" src="/img/hd_bg2.webm"></video>
+<video class="bg-video" loop muted autoplay playsinline preload="auto" src="/img/hd_bg2.webm"></video>
 
-<div class="video-overlay"></div>
-
-<nav class="navbar">
-<img src="https://en.wikipedia.org/wiki/File:Honor_of_Kings_logo.png" alt="Honor of Kings" class="logo">
-</nav>
-
-<div class="hero-content">
-<div class="main-logo">
-<svg class="main-logo-icon" viewBox="0 0 100 100">
-<path d="M50 0 C 77.6 0 100 22.4 100 50 C 100 77.6 77.6 100 50 100 C 22.4 100 0 77.6 0 50 C 0 22.4 22.4 0 50 0 Z M 50 20 C 33.4 20 20 33.4 20 50 C 20 66.6 33.4 80 50 80 C 66.6 80 80 66.6 80 50 C 80 33.4 66.6 20 50 20 Z M 50 35 C 58.3 35 65 41.7 65 50 C 65 58.3 58.3 65 50 65 C 41.7 65 35 58.3 35 50 C 35 41.7 41.7 35 50 35 Z M 50 45 C 47.2 45 45 47.2 45 50 C 45 52.8 47.2 55 50 55 C 52.8 55 55 52.8 55 50 C 55 47.2 52.8 45 50 45 Z M 85 50 L 50 85 L 15 50 L 50 15 Z" />
-</svg>
-<div class="main-logo-text">
-HONOR<br>OF KINGS
-</div>
-</div>
-<p class="subtitle">5V5 MOBILE MOBA</p>
+<div class="nav-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Honor_of_Kings_logo.png/220px-Honor_of_Kings_logo.png" alt="Honor of Kings" class="hok-logo">
 </div>
 </div>
 </body>
