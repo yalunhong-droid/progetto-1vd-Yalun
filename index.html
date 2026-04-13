@@ -10,64 +10,62 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial;
+    font-family: 'Arial', sans-serif;
 }
 body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #000;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.top-box,.bottom-box{position:absolute;left:55px;}
-.top-box{top:55px;}
-.bottom-box{bottom:55px;}
-
 .left-img-group{
     position: absolute;
     left: 55px;
     top: 50%;
     transform:translateY(-50%);
-    top:50%;
-    display: flex;
-    flex-direction: column;
+    display:flex;
+    flex-direction:column;
     gap: 16px;
 }
 .img-row{
-    display: flex;
+    display:flex;
     gap: 12px;
 }
 .side-img{
     width: 80px;
     height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
+    object-fit:cover;
+    border-radius:6px;
 }
 
 .right-img-group{
     position: absolute;
     right: 55px;
     top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
     gap: 16px;
 }
 
 .login-form {
-    z-index: 99;
-    color: #fff;
+    z-index: 10;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 18px;
+    align-items: flex-start;
+    margin:0 130px;
 }
 .form-title {
     font-size: 22px;
     margin-bottom: 10px;
+    align-self: center;
 }
 .form-input {
     width: 380px;
@@ -75,34 +73,27 @@ body {
     border-radius: 6px;
     border: none;
     padding: 0 15px;
+    font-size: 15px;
 }
 .gender-item {
     display: flex;
     align-items: center;
     gap: 8px;
+    font-size: 16px;
+}
+.submit-btn {
+    width: 380px;
+    height: 44px;
+    background-color: #0033ff;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    cursor: pointer;
 }
 </style>
 </head>
 <body>
-
-<div class="top-box">
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-</div>
-
-<div class="bottom-box">
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
-</div>
-
 
 <div class="left-img-group">
     <div class="img-row">
@@ -126,6 +117,7 @@ body {
         <img src="" class="side-img">
     </div>
 </div>
+
 <div class="right-img-group">
     <div class="img-row">
         <img src="" class="side-img">
@@ -150,18 +142,18 @@ body {
 </div>
 
 <div class="login-form">
-<h2 class="form-title">Inserisci le informazioni dell'utente</h2>
-<input type="text" class="form-mage" placeholder="Nome">
-<input type="text" class="form-input">
-<div class="gender-item">
-<input type="radio" name="gender">
-<span>Maschio</span>
-</div>
-<div class="gender-item">
-<input type="radio" name="gender">
-<span>Femmina</span>
-</div>
-<button class="submit-btn">Invia</button>
+    <h2 class="form-title">Inserisci le informazioni dell'utente</h2>
+    <input type="text" class="form-input" placeholder="Nome">
+    <input type="text" class="form-input">
+    <div class="gender-item">
+        <input type="radio" name="gender">
+        <span>Maschio</span>
+    </div>
+    <div class="gender-item">
+        <input type="radio" name="gender">
+        <span>Femmina</span>
+    </div>
+    <button class="submit-btn">Invia</button>
 </div>
 
 </body>
