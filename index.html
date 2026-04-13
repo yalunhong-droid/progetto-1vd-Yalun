@@ -3,135 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Honor of Kings</title>
-
+<meta name="robots" content="index, follow">
+<title>HONOR OF KINGS</title>
 <style>
-
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.hero {
-position: relative;
-width: 100%;
-height: 100vh;
-overflow: hidden;
+.top-box,.bottom-box{position:absolute;left:55px;}
+.top-box{top:55px;}
+.bottom-box{bottom:55px;}
+
+.left-img-group{
+    position: absolute;
+    left: 55px;
+    top: 50%;
+    transform:translateY(-50%);
+    top:50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.img-row{
+    display: flex;
+    gap: 12px;
+}
+.side-img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
-.bg-video {
-position: absolute;
-top: 50%;
-left: 50%;
-min-width: 100%;
-min-height: 100%;
-transform: translate(-50%, -50%);
-object-fit: cover;
-z-index: -1;
+.right-img-group{
+    position: absolute;
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.logo {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+.login-form {
+    z-index: 99;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
-
-.logo img {
-width: 400px;
+.form-title {
+    font-size: 22px;
+    margin-bottom: 10px;
 }
-
-.nav {
-position: absolute;
-top: 0;
-width: 100%;
-padding: 15px;
-background: rgba(0,0,0,0.3);
+.form-input {
+    width: 380px;
+    height: 44px;
+    border-radius: 6px;
+    border: none;
+    padding: 0 15px;
 }
-
-.nav img {
-width: 120px;
+.gender-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-
-.form-section {
-background: #000;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 80px 20px;
-min-height: 100vh;
-}
-
-.form-container {
-background: rgba(0,0,0,0.7);
-padding: 30px;
-border-radius: 10px;
-color: white;
-width: 300px;
-}
-
-.form-container h3 {
-text-align: center;
-margin-bottom: 20px;
-}
-
-.form-container input {
-width: 100%;
-margin: 10px 0;
-padding: 10px;
-}
-
-.form-container button {
-width: 100%;
-padding: 12px;
-background: blue;
-color: white;
-border: none;
-cursor: pointer;
-}
-
 </style>
 </head>
-
 <body>
 
-<div class="hero">
-
-<video class="bg-video" loop muted autoplay playsinline preload="auto">
-<source src="Closed Beta Announcement Video _ Honor of Kings.mp4" type="video/mp4">
-</video>
-
-<div class="nav">
-<img src="Honor_of_Kings_logo.png">
+<div class="top-box">
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
 </div>
 
-<div class="logo">
-<img src="Honor_of_Kings_logo.png">
+<div class="bottom-box">
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
+<div class="img-row"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"><img class="side-img"></div>
 </div>
 
+
+<div class="left-img-group">
+    <div class="img-row">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+    </div>
+    <div class="img-row">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+    </div>
+    <div class="img-row">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+    </div>
+    <div class="img-row">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+    </div>
+</div>
+<div class="right-img-group">
+    <div class="img-row">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+    </div>
+    <div class="img-row">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+    </div>
+    <div class="img-row">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+    </div>
+    <div class="img-row">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+        <img src="" class="side-img">
+    </div>
 </div>
 
-<div class="form-section">
-
-<div class="form-container">
-
-<h3>Inserisci le informazioni dell'utente</h3>
-
-<input type="text" placeholder="Nome">
-
-<input type="date">
-
-<div>
-<input type="radio" name="g"> Maschio
-<input type="radio" name="g"> Femmina
+<div class="login-form">
+<h2 class="form-title">Inserisci le informazioni dell'utente</h2>
+<input type="text" class="form-mage" placeholder="Nome">
+<input type="text" class="form-input">
+<div class="gender-item">
+<input type="radio" name="gender">
+<span>Maschio</span>
 </div>
-
-<button>Invia</button>
-
+<div class="gender-item">
+<input type="radio" name="gender">
+<span>Femmina</span>
 </div>
-
+<button class="submit-btn">Invia</button>
 </div>
 
 </body>
