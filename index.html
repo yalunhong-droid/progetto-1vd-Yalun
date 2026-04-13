@@ -6,6 +6,7 @@
 <title>Honor of Kings</title>
 
 <style>
+
 {
 margin: 0;
 padding: 0;
@@ -44,8 +45,6 @@ z-index: 1;
 object-fit: cover;
 background-color: #000;
 }
-
-/* 顶部导航 */
 .nav-top {
 position: absolute;
 top: 0;
@@ -56,11 +55,6 @@ z-index: 10;
 display: flex;
 align-items: center;
 background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
-}
-
-.center-logo img{
-max-width: 80%;
-height: auto;
 }
 
 .center-logo {
@@ -81,6 +75,14 @@ justify-content: center;
 padding: 40px 20px;
 }
 
+.form-wrapper{
+display: grid;
+grid-template-columns: repeat(3, 120px);
+gap: 30px;
+justify-content: center;
+align-items: center;
+}
+
 .form-container {
 width: 100%;
 max-width: 400px;
@@ -90,12 +92,21 @@ border-radius:10px;
 background-color: rgba(0,0,0,0.8);
 color: #fff;
 backdrop-filter: blur(10px);
+grid-column: 2;
 }
 
-.form-container h3 {
-text-align:center;
-margin-bottom: 25px;
-font-size: 22px;
+.side-box{
+width: 120px;
+height: 120px;
+background: rgba(255,255,255,0.08);
+border: 1px solid rgba(255,255,255,0.2);
+border-radius: 12px;
+transition: 0.3s;
+}
+
+.side-box:hover{
+transform: scale(1.1);
+background: rgba(255,255,255,0.18);
 }
 
 .form-group {
@@ -118,11 +129,6 @@ background: rgba(255,255,255,0.05);
 color: #fff;
 }
 
-.form-group input:focus {
-outline: none;
-border-color: #007bff;
-}
-
 .form-group button {
 width:100%;
 padding:14px;
@@ -133,19 +139,6 @@ border-radius:6px;
 cursor:pointer;
 font-size: 16px;
 margin-top: 10px;
-transition: 0.3s;
-}
-
-.form-group button:hover {
-opacity: 0.85;
-}
-
-.radio-group {
-margin-top: 8px;
-}
-.radio-group label {
-margin-right: 20px;
-cursor: pointer;
 }
 
 .content-section {
@@ -153,21 +146,17 @@ width: 100%;
 min-height: 100vh;
 background: #111;
 color: #fff;
-padding: 60px 20px;
 display: flex;
 align-items: center;
 justify-content: center;
 }
 
 .content-container {
-max-width: 1200px;
-margin: 0 auto;
 text-align: center;
 }
 
 .content-container h2 {
 font-size: 32px;
-margin-bottom: 30px;
 }
 
 </style>
@@ -181,45 +170,64 @@ margin-bottom: 30px;
 src="Closed Beta Announcement Video _ Honor of Kings.mp4"></video>
 
 <div class="nav-top">
-<img src="Honor_of_Kings_logo.png" style="width:140px;" alt="Honor of Kings">
+<img src="Honor_of_Kings_logo.png" style="width:140px;">
 </div>
 
 <div class="center-logo">
-<img src="Honor_of_Kings_logo.png" style="width: 420px;" alt="Honor of Kings">
+<img src="Honor_of_Kings_logo.png" style="width:420px;">
 </div>
 
 </div>
 
 <div class="form-section">
-<div class="form-container">
-<h3>Inserisci le informazioni dell'utente</h3>
 
-<div class="form-group">
-<label>nome:</label>
-<input type="text" placeholder="scrivi il tuo nome del gioco">
-</div>
+  <div class="form-wrapper">
 
-<div class="form-group">
-<label>data di nascita:</label>
-<input type="date">
-</div>
+    <div class="side-box"></div>
+    <div class="side-box"></div>
+    <div class="side-box"></div>
 
-<div class="form-group">
-<label>maschio/femmina:</label>
-<div class="radio-group">
-<input type="radio" name="gender" id="male" checked>
-<label for="male">maschio</label>
+    <div class="side-box"></div>
 
-<input type="radio" name="gender" id="female">
-<label for="female">femmina</label>
-</div>
-</div>
+    <div class="form-container">
 
-<div class="form-group">
-<button>Invia informazioni</button>
-</div>
+      <h3>Inserisci le informazioni dell'utente</h3>
 
-</div>
+      <div class="form-group">
+        <label>nome:</label>
+        <input type="text">
+      </div>
+
+      <div class="form-group">
+        <label>data di nascita:</label>
+        <input type="date">
+      </div>
+
+      <div class="form-group">
+        <label>maschio/femmina:</label>
+        <div class="radio-group">
+          <input type="radio" name="gender" id="male" checked>
+          <label for="male">maschio</label>
+
+          <input type="radio" name="gender" id="female">
+          <label for="female">femmina</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button>Invia informazioni</button>
+      </div>
+
+    </div>
+
+    <div class="side-box"></div>
+
+    <div class="side-box"></div>
+    <div class="side-box"></div>
+    <div class="side-box"></div>
+
+  </div>
+
 </div>
 
 <div class="content-section">
