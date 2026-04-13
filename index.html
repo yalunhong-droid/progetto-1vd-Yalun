@@ -10,17 +10,15 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
-
-body {
-overflow: hidden;
+font-family: Arial;
 }
 
 .hero {
 position: relative;
-width: 100vw;
+width: 100%;
 height: 100vh;
 }
+
 .hero video {
 position: absolute;
 top: 50%;
@@ -47,11 +45,46 @@ position: absolute;
 top: 0;
 width: 100%;
 padding: 15px;
-background: rgba(0,0,0,0.4);
+background: rgba(0,0,0,0.3);
 }
 
 .nav img {
 width: 120px;
+}
+
+.form-section {
+background: #000;
+display: flex;
+justify-content: center;
+padding: 50px 20px;
+}
+
+.form-container {
+background: rgba(0,0,0,0.7);
+padding: 30px;
+border-radius: 10px;
+color: white;
+width: 300px;
+}
+
+.form-container h3 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.form-container input {
+width: 100%;
+margin: 10px 0;
+padding: 10px;
+}
+
+.form-container button {
+width: 100%;
+padding: 12px;
+background: blue;
+color: white;
+border: none;
+cursor: pointer;
 }
 </style>
 </head>
@@ -72,6 +105,25 @@ width: 120px;
 <img src="Honor_of_Kings_logo.png">
 </div>
 
+</div>
+
+<div class="form-section">
+<div class="form-container">
+
+<h3>Inserisci le informazioni dell'utente</h3>
+
+<input type="text" placeholder="Nome">
+
+<input type="date">
+
+<div>
+<input type="radio" name="g"> Maschio
+<input type="radio" name="g"> Femmina
+</div>
+
+<button>Invia</button>
+
+</div>
 </div>
 
 </body>
