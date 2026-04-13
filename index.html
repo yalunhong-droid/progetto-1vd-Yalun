@@ -6,6 +6,7 @@
 <title>Honor of Kings</title>
 
 <style>
+
 {
 margin: 0;
 padding: 0;
@@ -15,7 +16,7 @@ font-family: 'Arial', sans-serif;
 
 .hero-section {
 position: relative;
-width: 100vw;
+width: 100%;
 height: 60vh;
 overflow: hidden;
 background-color: #000;
@@ -28,8 +29,8 @@ position: absolute;
 bottom: 0;
 left: 0;
 width: 100%;
-height: 120px;
-background: linear-gradient(to bottom, transparent, #000);
+height: 150px;
+background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
 z-index: 5;
 }
 
@@ -37,13 +38,12 @@ z-index: 5;
 position: absolute;
 top: 50%;
 left: 50%;
-min-width: 100%;
-min-height: 100%;
-width: auto;
-height: auto;
+width: 100%;
+height: 100%;
 transform: translate(-50%, -50%);
 z-index: 1;
-object-fit: cover;
+object-fit: contain;
+background-color: #000;
 }
 
 .nav-top {
@@ -51,11 +51,16 @@ position: absolute;
 top: 0;
 left: 0;
 width: 100%;
-padding: 1rem 4%;
+padding: 15px 5%;
 z-index: 10;
 display: flex;
 align-items: center;
-background-color: rgba(0,0,0,0.3);
+background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+
+.center-logo img{
+max-width: 80%;
+height: auto;
 }
 
 .center-logo {
@@ -65,8 +70,6 @@ left: 50%;
 transform: translate(-50%, -50%);
 z-index: 99;
 }
-
-/* ===== 表单区域 ===== */
 .form-section {
 width: 100%;
 min-height: 100vh;
@@ -81,10 +84,11 @@ padding: 40px 20px;
 width: 100%;
 max-width: 400px;
 padding: 30px;
-border:1px solid #ccc;
-border-radius:8px;
-background-color: rgba(0,0,0,0.7);
+border:1px solid rgba(255,255,255,0.2);
+border-radius:10px;
+background-color: rgba(0,0,0,0.8);
 color: #fff;
+backdrop-filter: blur(10px);
 }
 
 .form-container h3 {
@@ -98,28 +102,41 @@ margin:20px 0;
 }
 
 .form-group label {
-font-size: 16px;
+font-size: 15px;
+opacity: 0.8;
 }
 
 .form-group input {
 width:100%;
 padding:12px;
 margin-top:8px;
-border:1px solid #ddd;
-border-radius:4px;
+border:1px solid rgba(255,255,255,0.2);
+border-radius:5px;
 font-size: 14px;
+background: rgba(255,255,255,0.05);
+color: #fff;
+}
+
+.form-group input:focus {
+outline: none;
+border-color: #007bff;
 }
 
 .form-group button {
 width:100%;
 padding:14px;
-background:#007bff;
+background: linear-gradient(45deg, #007bff, #00c6ff);
 color:white;
 border:none;
-border-radius:4px;
+border-radius:6px;
 cursor:pointer;
 font-size: 16px;
 margin-top: 10px;
+transition: 0.3s;
+}
+
+.form-group button:hover {
+opacity: 0.85;
 }
 
 .radio-group {
@@ -152,10 +169,6 @@ font-size: 32px;
 margin-bottom: 30px;
 }
 
-.content-container p {
-font-size: 18px;
-line-height: 1.8;
-}
 </style>
 </head>
 
@@ -166,11 +179,11 @@ line-height: 1.8;
 src="file:///C:/Users/Administrator/Downloads/Closed%20Beta%20Announcement%20Video%20_%20Honor%20of%20Kings.mp4"></video>
 
 <div class="nav-top">
-<img src="Honor_of_Kings_logo.png" style="width:150px;" alt="Honor of Kings">
+<img src="Honor_of_Kings_logo.png" style="width:140px;" alt="Honor of Kings">
 </div>
 
 <div class="center-logo">
-<img src="Honor_of_Kings_logo.png" style="width: 500px;" alt="Honor of Kings">
+<img src="Honor_of_Kings_logo.png" style="width: 420px;" alt="Honor of Kings">
 </div>
 </div>
 
