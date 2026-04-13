@@ -45,6 +45,7 @@ z-index: 1;
 object-fit: cover;
 background-color: #000;
 }
+
 .nav-top {
 position: absolute;
 top: 0;
@@ -76,11 +77,30 @@ padding: 40px 20px;
 }
 
 .form-wrapper{
-display: grid;
-grid-template-columns: repeat(3, 120px);
-gap: 30px;
+display: flex;
 justify-content: center;
 align-items: center;
+gap: 60px;
+}
+
+.side-column{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.side-box{
+width: 90px;
+height: 90px;
+background: rgba(255,255,255,0.08);
+border: 1px solid rgba(255,255,255,0.2);
+border-radius: 10px;
+transition: 0.3s;
+}
+
+.side-box:hover{
+transform: scale(1.1);
+background: rgba(255,255,255,0.18);
 }
 
 .form-container {
@@ -92,21 +112,6 @@ border-radius:10px;
 background-color: rgba(0,0,0,0.8);
 color: #fff;
 backdrop-filter: blur(10px);
-grid-column: 2;
-}
-
-.side-box{
-width: 120px;
-height: 120px;
-background: rgba(255,255,255,0.08);
-border: 1px solid rgba(255,255,255,0.2);
-border-radius: 12px;
-transition: 0.3s;
-}
-
-.side-box:hover{
-transform: scale(1.1);
-background: rgba(255,255,255,0.18);
 }
 
 .form-group {
@@ -183,11 +188,12 @@ src="Closed Beta Announcement Video _ Honor of Kings.mp4"></video>
 
   <div class="form-wrapper">
 
-    <div class="side-box"></div>
-    <div class="side-box"></div>
-    <div class="side-box"></div>
-
-    <div class="side-box"></div>
+    <div class="side-column">
+      <div class="side-box"></div>
+      <div class="side-box"></div>
+      <div class="side-box"></div>
+      <div class="side-box"></div>
+    </div>
 
     <div class="form-container">
 
@@ -220,11 +226,12 @@ src="Closed Beta Announcement Video _ Honor of Kings.mp4"></video>
 
     </div>
 
-    <div class="side-box"></div>
-
-    <div class="side-box"></div>
-    <div class="side-box"></div>
-    <div class="side-box"></div>
+    <div class="side-column">
+      <div class="side-box"></div>
+      <div class="side-box"></div>
+      <div class="side-box"></div>
+      <div class="side-box"></div>
+    </div>
 
   </div>
 
