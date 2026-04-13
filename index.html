@@ -6,10 +6,11 @@
 <title>Honor of Kings</title>
 
 <style>
+
 {
-margin:0;
-padding:0;
-box-sizing:border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 font-family: Arial;
 }
 
@@ -17,10 +18,11 @@ font-family: Arial;
 position: relative;
 width: 100%;
 height: 100vh;
+overflow: hidden;
 }
 
 .bg-video {
-position: fixed;
+position: absolute;
 top: 50%;
 left: 50%;
 min-width: 100%;
@@ -57,7 +59,9 @@ width: 120px;
 background: #000;
 display: flex;
 justify-content: center;
-padding: 50px 20px;
+align-items: center;
+padding: 80px 20px;
+min-height: 100vh;
 }
 
 .form-container {
@@ -87,16 +91,17 @@ color: white;
 border: none;
 cursor: pointer;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<video class="bg-video" loop muted autoplay playsinline preload="auto" src="Closed Beta Announcement Video _ Honor of Kings.mp4">
-</video>
-
 <div class="hero">
+
+<video class="bg-video" loop muted autoplay playsinline preload="auto">
+<source src="Closed Beta Announcement Video _ Honor of Kings.mp4" type="video/mp4">
+</video>
 
 <div class="nav">
 <img src="Honor_of_Kings_logo.png">
@@ -109,6 +114,7 @@ cursor: pointer;
 </div>
 
 <div class="form-section">
+
 <div class="form-container">
 
 <h3>Inserisci le informazioni dell'utente</h3>
@@ -125,6 +131,7 @@ cursor: pointer;
 <button>Invia</button>
 
 </div>
+
 </div>
 
 </body>
